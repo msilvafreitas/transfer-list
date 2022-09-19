@@ -33,9 +33,9 @@ function App() {
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
       <img src={logo} alt="TOL Logo" />
 
-      <h1 className="text-6xl text-white font-black mt-20">Your next <span className='text-transparent bg-tol-gradient bg-clip-text'>player</span> is here.</h1>
+      <h1 className="text-6xl text-white font-black mt-20 p-4">Your next <span className='text-transparent bg-tol-gradient bg-clip-text'>player</span> is here.</h1>
       
-      <div className='grid grid-cols-7 gap-6 mt-16'>
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-7 gap-6 mt-16'>
 
         {positions.map(position => {
           return (

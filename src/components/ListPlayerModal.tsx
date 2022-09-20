@@ -157,7 +157,7 @@ export function ListPlayerModal() {
 
               <footer className='mt-4 flex justify-end gap-4'>
                 <Dialog.Close className='bg-zinc-500 px-5 h-12 rounded-md font-semibold hover:bg-zinc-600'>Cancel</Dialog.Close>
-                <button type="submit" className='bg-amber-400 px-5 h-12 rounded-md font-semibold hover:bg-amber-500'>List Player</button>
+                <button type="submit" className='bg-[#a51e1a] px-5 h-12 rounded-md font-semibold hover:bg-tol-gradient'>List Player</button>
               </footer>
             </form>
           

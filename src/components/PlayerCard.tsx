@@ -1,4 +1,5 @@
-
+import { Icon } from '@iconify/react';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 interface Player {
     id: string;
@@ -11,11 +12,10 @@ interface Player {
     delaydec: boolean;
   }
 
+
+
 export function PlayerCard(props: Player) {
 
-    function handleDiscord() {
-
-    }
 
     function toRating(rating: string) {
         if(rating == '1') {
@@ -44,7 +44,15 @@ export function PlayerCard(props: Player) {
             <p>{toRating(props.current)}/{toRating(props.potential)}</p>
             <p>{props.accdev ? 'Acc. Dev.': '' }</p>
             <p>{props.delaydec ? 'Delay Decline': '' }</p>
-            <button className="bg-[#A51E1A] p-2 rounded-lg mt-2">Contact Manager</button>
+            <div className='flex justify-center'>
+            <CopyToClipboard text={props.discord}>
+            <button className="bg-[#5865F2] active:bg-zinc-700 p-2 rounded-lg mt-2 flex justify-center">
+                <Icon icon="simple-icons:discord" className='m-1'/>{props.discord}
+            </button>
+            </CopyToClipboard>
+            </div>
+            <p className='text-sm'>Click to copy</p>
+
         </div>
     )
 }

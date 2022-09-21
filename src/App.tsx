@@ -40,12 +40,14 @@ function App() {
 
         {positions.map(position => {
           return (
+            <Dialog.Root>
             <PositionBanner 
               key={position.id}
               bannerUrl={position.bannerUrl} 
               title={position.title} 
               playersCount={position._count.players}
             />
+            </Dialog.Root>
           )
         })}
 
@@ -59,7 +61,7 @@ function App() {
         <ListPlayerModal />
 
       </Dialog.Root>
-      <footer className='text-white mt-10 text-sm'>Created by <a className='font-bold hover:text-transparent hover:bg-tol-gradient hover:bg-clip-text' href='https://github.com/msilvafreitas'>Matheus Freitas</a></footer>
+      <footer className='text-white mt-10 text-sm'>Created by <a className='font-bold hover:text-transparent hover:bg-tol-gradient hover:bg-clip-text' href='https://github.com/msilvafreitas'>Matheus Freitas</a> in <a className='font-bold hover:text-transparent hover:bg-tol-gradient hover:bg-clip-text' href="http://rocketseat.com.br">Rocketseat NLW</a></footer>
     </div>
     
   )

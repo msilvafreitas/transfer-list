@@ -9,7 +9,7 @@ export function ListPlayer()  {
                     <strong className='text-2xl text-white font-black block'>Want to sell a player?</strong>
                     <span className='text-zinc-400 block'>Publish your ad!</span>
                 </div>
-                <Dialog.Trigger id="list" className='py-3 px-4 text-white font-bold bg-[#a51e1a] hover:bg-tol-gradient rounded flex items-center gap-3'>
+                <Dialog.Trigger className='py-3 px-4 text-white font-bold bg-[#a51e1a] hover:bg-tol-gradient rounded flex items-center gap-3'>
                 <MagnifyingGlassPlus size={24} />
                 Publish your Player
                 </Dialog.Trigger>

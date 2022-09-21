@@ -14,13 +14,16 @@ interface Player {
     delaydec: boolean;
   }
 
+  interface PositionId {
+    position: string;
+  }
 
-export function PlayersList() {
+export function PlayersList(props: PositionId) {
 
     const [players, setPlayers] = useState<Player[]>([])
 
     useEffect(() => {
-        axios('http://127.0.0.1:3333/positions')
+        axios(`http://127.0.0.1:3333/positions/${props.position}/players`)
           .then(response => {
             setPlayers(response.data)
           })
@@ -28,13 +31,14 @@ export function PlayersList() {
 
 
     return (
-        <Dialog.Portal id='list'>
+        <Dialog.Portal id={props.position}>
             <Dialog.Overlay className="bg-black/60 inset-0 fixed"/>
 
             <Dialog.Content className="fixed bg-[#2A2634] py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25">
             {players.map(player => {
                 return (
                     <PlayerCard
+                        key={player.id}
                         id={player.id}
                         name={player.name}
                         age={player.age}

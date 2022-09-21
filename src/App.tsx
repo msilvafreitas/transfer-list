@@ -6,6 +6,7 @@ import logo from './assets/tol.png';
 import { ListPlayer } from './components/ListPlayer';
 import { ListPlayerModal } from './components/ListPlayerModal';
 import axios from 'axios';
+import { PlayersList } from './components/PlayersList';
 
 interface Position {
   id: string;
@@ -47,6 +48,7 @@ function App() {
               title={position.title} 
               playersCount={position._count.players}
             />
+            <PlayersList position={position.id}/>
             </Dialog.Root>
           )
         })}
